@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { formatDateJS } from "../helpers/formatDate";
 import { SERVER_URL } from "../serverUrl";
 import { useNavigate } from "react-router-dom";
+import Swal from "sweetalert2";
 
 export default function CreateInvoice() {
   const navigate = useNavigate();
@@ -38,6 +39,11 @@ export default function CreateInvoice() {
       navigate("/");
     } catch (error) {
       console.log(error);
+      Swal.fire({
+        icon: "error",
+        title: "Invalid Input",
+        text: error.response.data.message[0],
+      });
     }
   };
 
@@ -59,7 +65,7 @@ export default function CreateInvoice() {
 
   return (
     <div>
-      <h1>Create Invoice</h1>
+      <h1 className="text-center text-3xl font-bold mb-5">Create Invoice</h1>
       <div className="justify-center flex">
         <form
           className="flex flex-col gap-5 border p-2"

@@ -17,6 +17,7 @@ app.put("/invoices/:invoiceId", ProductController.updateInvoice);
 app.post("/addProductToInvoice/:invoiceId", ProductController.addProductToInvoice);
 app.get("/orderedProducts/:invoiceId", ProductController.getOrderedProducts);
 app.get("/invoices", ProductController.getInvoices);
+app.get("/invoices/:invoiceId", ProductController.getInvoiceDetail);
 
 app.use(errorHandler);
 

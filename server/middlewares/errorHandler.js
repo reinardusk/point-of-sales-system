@@ -11,6 +11,10 @@ const errorHandler = (err, req, res, next) => {
     status = 400
     message = err.errors.map(e => e.message)
   }
+  if (err.name === "StockNotEnough") {
+    status = 400
+    message = "Stock is not enough"
+  }
 
   res.status(status).json({ message });
 };

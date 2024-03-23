@@ -5,6 +5,7 @@ import axios from "axios";
 import { SERVER_URL } from "../serverUrl";
 import QuantityModal from "../components/QuantityModal";
 import formatRupiah from "../helpers/formatRupiah";
+import Swal from "sweetalert2";
 
 export default function InvoiceCard({ invoiceData, invoiceId }) {
   let total = 0;
@@ -42,6 +43,11 @@ export default function InvoiceCard({ invoiceData, invoiceId }) {
       setQuantityModal(false);
     } catch (error) {
       console.log(error);
+      Swal.fire({
+        icon: "error",
+        title: "Invalid Input",
+        text: error.response.data.message,
+      });
     }
   };
 
@@ -69,7 +75,7 @@ export default function InvoiceCard({ invoiceData, invoiceId }) {
             <h2>Invoice No. : {invoiceData?.invoiceNumber}</h2>
             <h2>Date : {formatDate(invoiceData?.invoiceDate)}</h2>
           </div>
-          <div className="w-full">
+          <div className="w-full flex flex-col gap-2 my-2">
             <h2>Customer Name : {invoiceData?.customerName}</h2>
             <h2>Sales Person Name : {invoiceData?.salesPersonName}</h2>
           </div>

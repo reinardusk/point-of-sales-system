@@ -1,6 +1,6 @@
 export default function QuantityModal({ handleSubmitProduct }) {
   return (
-    <div className="border w-[70%] min-h-[50%] bg-red-500 absolute z-10 p-2 flex flex-col justify-center items-center shadow-xl">
+    <div className="border w-[70%] min-h-[50%] bg-white absolute z-10 p-2 flex flex-col justify-center items-center shadow-xl">
       <form onSubmit={(e) => handleSubmitProduct(e)}>
         <input
           type="number"
