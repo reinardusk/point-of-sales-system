@@ -19,10 +19,6 @@ export default function Navbar() {
           <li className="cursor-pointer">
             <Link to="/create">Create Invoice</Link>
           </li>
-          {/* <li className="cursor-pointer">
-            <Link to="/rooms">Scoreboards</Link>
-          </li> */}
-          <li className="cursor-pointer">Logout</li>
         </ul>
       </nav>
       <div className="pt-20"></div>

@@ -218,7 +218,7 @@ export default function LandingPage() {
           revenueDec,
         ],
         backgroundColor: "rgba(255, 99, 132, 0.2)",
-        borderColor: "rgba(255, 99, 132, 1)",
+        borderColor: "rgba(20, 184, 166, 1)",
       },
     ],
   };
