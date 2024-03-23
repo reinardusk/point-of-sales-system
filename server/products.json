@@ -1,0 +1,26 @@
+[
+  {
+    "name": "sabun",
+    "picture": "images/products/sabun.jpg",
+    "stock": 10,
+    "price": 10000
+  },
+  {
+    "name": "sampo",
+    "picture": "images/products/sampo.jpg",
+    "stock": 18,
+    "price": 12000
+  },
+  {
+    "name": "sikat gigi",
+    "picture": "images/products/sikat_gigi.jpg",
+    "stock": 5,
+    "price": 15000
+  },
+  {
+    "name": "deodorant",
+    "picture": "images/products/deodorant.jpg",
+    "stock": 10,
+    "price": 20000
+  }
+]
